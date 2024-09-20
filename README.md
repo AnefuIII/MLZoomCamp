@@ -8,11 +8,11 @@
 
 OTHER LINKS
 
-Slack
-datatalks.club/slack.html
+Slack;
+https://datatalks.club/slack.html
 
-Twitter
-twitter.com/DataTalksClub
+Twitter;
+https://twitter.com/DataTalksClub
 
-LinkedIn
-linkedin.com/company/datatalks-club
+LinkedIn;
+https://linkedin.com/company/datatalks-club
