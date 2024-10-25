@@ -1,10 +1,10 @@
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask('ping')
 
 @app.route('/ping', methods = ['GET'])
 def pong():
-    return 'OCHE AI'
+    return 'PONG'
 
 
 if '__name__' == '__main__':
