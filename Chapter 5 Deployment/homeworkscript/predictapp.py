@@ -5,13 +5,17 @@ from flask import request
 from flask import jsonify
 
 
-model_file = 'model_C=1.0.bin'
+model = "model1.bin"
+dv = "dv.bin"
 
-with open(model_file, 'rb') as f_in:
-    dv, model = pickle.load(f_in)
+with open(model, "rb") as f_in:
+    model = pickle.load(f_in)
+
+with open(dv, "rb") as f_in2:
+    dv = pickle.load(f_in2)
 
 
-app = Flask('churn')
+app = Flask('client')
 
 @app.route('/predict', methods = ['POST']) #use post method because we want to send information
 def predict():
@@ -21,11 +25,11 @@ def predict():
 
     X = dv.transform([customer])
     y_pred = model.predict_proba(X)[0, 1]
-    churn = y_pred >= 0.5
+    sub = y_pred >= 0.5
 
     result = {
         "Churn Probability": float(y_pred),
-        "Churn": bool(churn)
+        "Churn": bool(sub)
     }
 
     return jsonify(result) # to output a json file

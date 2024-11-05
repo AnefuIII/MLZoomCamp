@@ -1,13 +1,19 @@
-import pickle
+#!/usr/bin/env python
+# coding: utf-8
 
 
-file_output = "model_C=1.0.bin"
-
-with open(file_output, "rb") as f_in:
-    dv, model = pickle.load(f_in)
+#get_ipython().run_line_magic('autosave', '0')
 
 
-customer = {"customerid": "9305-cdskc",
+
+import requests
+
+
+
+url = "http://localhost:9696/predict"
+
+
+customer = {
  "gender": "female",
  "seniorcitizen": 0,
  "partner": "no",
@@ -19,18 +25,26 @@ customer = {"customerid": "9305-cdskc",
  "onlinesecurity": "no",
  "onlinebackup": "no",
  "deviceprotection": "yes",
- "techsupport": "no",
+ "techsupport": "yes",
  "streamingtv": "yes",
  "streamingmovies": "yes",
  "contract": "month-to-month",
  "paperlessbilling": "yes",
  "paymentmethod": "electronic_check",
- "monthlycharges": 99.65,
- "totalcharges": 820.5}
+ "monthlycharges": 19.65,
+ "totalcharges": 200.5}
 
-X = dv.transform(customer)
 
-y_pred = model.predict_proba(X)[0, 1]
 
-print("input: ", customer)
-print("churn probability: ", y_pred)
+response = requests.post(url, json = customer).json()
+print(response)
+
+
+
+
+if response['Churn'] == True:
+    print('sending email to customer %s' % ('9305-cdskc'))
+
+
+
+
