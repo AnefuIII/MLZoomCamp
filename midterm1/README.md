@@ -25,4 +25,4 @@ attack and stroke risks, covering both medical and demographic factors
 13. thal: Thalassemia types. Values: 1 = Normal, 2 = Fixed defect, 3 = Reversible defect.
 14. target: Outcome variable (heart attack risk). Values: 1 = more chance of heart attack, 0 = less chance of heart attack.
 
-for more info about data check here.
+for more info about data check <a href = "https://www.kaggle.com/datasets/mfarhaannazirkhan/heart-dataset"> here.</a>
