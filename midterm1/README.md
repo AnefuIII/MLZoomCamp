@@ -1,6 +1,6 @@
 # Demo Video
 
-<a href = "https://youtu.be/cS6oa99W7rg" target = "_blank">
+<a href = "https://youtu.be/cS6oa99W7rg" target = "_blank"></a>
 
 # MIDTERM PROJECT; HEART DISEASE PREDICTION
 This project is done as a midterm project for machine learning zoomcamp by 
