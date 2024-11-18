@@ -1,3 +1,7 @@
+# Demo Video
+
+<a href = "https://youtu.be/cS6oa99W7rg" target = "_blank">
+
 # MIDTERM PROJECT; HEART DISEASE PREDICTION
 This project is done as a midterm project for machine learning zoomcamp by 
 https://datatalks.club/. The course is hosted for free on <a href ="https://www.youtube.com/watch?v=8wuR_Oz-to0&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=1">youtube.</a>
