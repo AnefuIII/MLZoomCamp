@@ -18,8 +18,11 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow.lite as tflite
 from keras_image_helper import create_preprocessor
 
+
 tflite_model_name = 'capstone1model.tflite'
 #image_path = 'CIFAKE/final_test/FAKE/990 (2).jpg'
+#image_path = ''
+classes = ["FAKE", "REAL"]
 
 # load model, get input and output index
 interpreter = tflite.Interpreter(model_path=tflite_model_name)
@@ -31,11 +34,10 @@ output_index = interpreter.get_output_details()[0]['index']
 #Create preprocessor
 preprocessor = create_preprocessor('xception', target_size=(299,299))
 
-classes = ["FAKE", "REAL"]
 
 #inference/prediction; set input, invoke, get output
 def predict(url):
-  X = preprocessor.from_path(url)
+  X = preprocessor.from_url(url)
   interpreter.set_tensor(input_index, X)
   interpreter.invoke()
   preds = interpreter.get_tensor(output_index)
@@ -45,52 +47,8 @@ def predict(url):
 
   return dict(zip(classes, preds_list))
 
-
 def lambda_handler(event, context):
   url = event['url']
   result = predict(url)
   return result
 
-
-# #If i wanted the image to be from a webpage
-
-# import requests
-
-# def predict(url):
-#   """
-#   Predicts the result based on the given image URL.
-
-#   Args:
-#       url: URL of the image.
-
-#   Returns:
-#       A dictionary of predictions.
-#   """
-#   try:
-#     response = requests.get(url)
-#     response.raise_for_status()  # Raise an exception for bad status codes
-#     image_data = response.content 
-
-#     # Assuming your preprocessor can handle image data in bytes
-#     X = preprocessor.from_path(image_data) 
-
-#     # ... rest of your predict function ...
-#     interpreter.set_tensor(input_index, X)
-#     interpreter.invoke()
-#     preds = interpreter.get_tensor(output_index)
-
-#     preds_list = [float(pred) for pred in preds[0]] 
-
-#     return dict(zip(classes, preds_list))
-
-#   except requests.exceptions.RequestException as e:
-#     print(f"Error fetching image from URL: {e}")
-#     return None
-#   except Exception as e:
-#     print(f"An unexpected error occurred: {e}")
-#     return None
-
-# def lambda_handler(event, context):
-#   url = event['url']
-#   result = predict(url)
-#   return result

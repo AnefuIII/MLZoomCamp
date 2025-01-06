@@ -17,7 +17,7 @@ virtual env cmds
 Docker cmds
 1. docker build -t aivsrealimagemodel .
 2. docker run -it --rm -p 8080:8080 aivsrealimagemodel:latest
-
+3. to exit press Cntrl + C
 
 multiple python link
 https://csweb.wooster.edu/mionescu/cs232/guides/windows-multiple-python-versions/#:~:text=You%20can%20have%20multiple%20simultaneous,shortcuts%20to%20our%20Python%20interpreters.
