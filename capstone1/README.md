@@ -4,7 +4,7 @@ https://datatalks.club/. The course is hosted for free on <a href ="https://www.
 
 ## Demo Video
 
-<a href = "https://youtu.be/cS6oa99W7rg" target = "_blank">Demo Video (Youtube)</a>
+<a href = "https://youtu.be/1ff58j9Cqgk" target = "_blank">Demo Video (Youtube)</a>
 
 ## CIFAKE Data source 
 https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download
@@ -67,6 +67,7 @@ for more info about data check <a href = "https://www.kaggle.com/datasets/birdy6
     docker build -t aivsrealimagemodel .
     docker run -it --rm -p 8080:8080 aivsrealimagemodel:latest
     python test.py # test model pipeline in another terminal such as VS Code
+    Cntrl + C # to terminate docker running server in powershell
     ```
 
 
