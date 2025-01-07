@@ -15,7 +15,7 @@ The dataset contains two classes; REAL and FAKE. This project used a subset of t
 
 We used 1,400 images for training (700 per class) and 600 for testing (300 per class)
 
-** Dataset References
+** Dataset References **
 
 Krizhevsky, A., & Hinton, G. (2009). Learning multiple layers of features from tiny images.
 
@@ -26,7 +26,7 @@ Real images are from Krizhevsky & Hinton (2009), fake images are from Bird & Lot
 for more info about data check <a href = "https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download"> here.</a>
 
 ## INSTRUCTION TO USE MODEL
-** REQUIREMENTS
+** REQUIREMENTS **
 - Python 3.9
 - Docker
 
