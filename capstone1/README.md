@@ -6,7 +6,8 @@
 This project is done as a capstone project for machine learning zoomcamp by 
 https://datatalks.club/. The course is hosted for free on <a href ="https://www.youtube.com/watch?v=8wuR_Oz-to0&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=1">youtube.</a>
 
-## CIFAKE Data source: https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download
+## CIFAKE Data source 
+https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download
 
 ## Dataset description
 
